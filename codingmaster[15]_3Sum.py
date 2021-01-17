@@ -1,4 +1,5 @@
 from typing import *
+
 def threeSum(nums: List[int]) -> List[List[int]]:
     results = []
     nums.sort()
@@ -7,6 +8,7 @@ def threeSum(nums: List[int]) -> List[List[int]]:
         #중복 제거
         if i > 0 and nums[i] == nums[i - 1]:
             continue
+
         #간격을 좁혀가며 계산
         left, right = i + 1, len(nums) - 1
         while left < right:
