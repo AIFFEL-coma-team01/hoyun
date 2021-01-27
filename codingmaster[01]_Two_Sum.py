@@ -20,3 +20,28 @@ class Solution:
             else:
                 print("ERROR")
                 break
+
+# Solution 01 - Brute-Force
+def twoSum_sol1(nums, target):
+    # [1,2,3,4,5]
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i,j]
+
+# Solution 02 - in 이용한 탐색
+def twoSum_sol2(nums, target):
+    for i, n in enumerate(nums):
+        complement = target - n
+
+        # target에서 뺀 나머지가 뒤에 있을까??
+        if complement in nums[i+1:]:
+            # list.index(v) : value 가 위치한 인덱스 반환
+            return nums.index(n), nums[i+1:].index(complement) + (i+1)
+
+for i, v in enumerate(a):
+    print(i,v)
+
+
+3 in a
+-1 in a
