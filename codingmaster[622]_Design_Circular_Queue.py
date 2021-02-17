@@ -4,11 +4,14 @@ class MyCircularQueue:
         self.cq = [None] * k
         self.k = k
 
+
     def enQueue(self, value: int) -> bool:
         for i in range(self.k):
             if self.cq[i] == None:
                 self.cq[i] = value
                 return True
+        for j in range(1, len(value)-self.k):
+            self.cq[j] = value[j+self.k]
         return False
 
     def deQueue(self) -> bool:
@@ -51,7 +54,3 @@ class MyCircularQueue:
 # param_4 = obj.Rear()
 # param_5 = obj.isEmpty()
 # param_6 = obj.isFull()
-
-a = [None, 1]
-if a == [None]*2:
-    print("dd")

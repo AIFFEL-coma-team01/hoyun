@@ -1,6 +1,6 @@
 class Solution:
     from collections import Counter
-
+     "cbacdcbc" {'c':3, 'b':1, .....}
     def removeDuplicateLetters(self, s: str) -> str:
             counter, seen, stack = collections.Counter(s), set(), []
 
