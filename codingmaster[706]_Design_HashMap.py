@@ -28,7 +28,7 @@ class MyHashMap:
         """
         self.hashmap[key] = -1
 '''
-'''
+
 class MyHashMap:
 
     def __init__(self):
@@ -47,8 +47,11 @@ class MyHashMap:
         if len(self.hashmap[idx]) == 0:
             self.hashmap[idx] = [[key, value]]
         else:
+            hashmap[0][[1,2]]
+            (key : 11, value : 20)
+
             for i, j in enumerate(self.hashmap[idx]):
-                if j[0] == key:
+                if j[0] == 11:
                     self.hashmap[idx][i] = [j[0], value]
                     break
                 else:
@@ -61,8 +64,9 @@ class MyHashMap:
         """
         idx = key % self.size
         try:
+            hashmap[0][[]]
             for i, p in enumerate(self.hashmap[idx]):
-                if p[0] == key:
+                if p[0] == 11:
                     return p[1]
         except:
             return -1
@@ -79,10 +83,3 @@ class MyHashMap:
                     del self.hashmap[idx][i]
         except:
             pass
-
-# Your MyHashMap object will be instantiated and called as such:
-# obj = MyHashMap()
-# obj.put(key,value)
-# param_2 = obj.get(key)
-# obj.remove(key)
-'''

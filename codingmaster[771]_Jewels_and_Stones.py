@@ -12,3 +12,8 @@ class Solution:
                 total += _dic[s]
 
         return total
+
+from collections import OrderedDict, defaultdict
+
+a = defaultdict(list)
+a[0]
